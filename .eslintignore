@@ -1,0 +1,10 @@
+node_modules
+package-lock.json
+*.md
+src/graphql/types.ts
+/build
+
+# sw
+service-worker.ts
+serviceWorkerRegistration.ts
+reportWebVitals.ts
