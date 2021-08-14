@@ -6,7 +6,7 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import ExploreContainer from "components/ExploreContainer";
-import Header from "components/app/header";
+import Header from "pages/header";
 import "./Home.scss";
 
 const Home: React.FC = () => <IonPage>
