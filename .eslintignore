@@ -8,3 +8,7 @@ src/graphql/types.ts
 service-worker.ts
 serviceWorkerRegistration.ts
 reportWebVitals.ts
+
+# test
+setupTests.ts
+*.test.tsx
