@@ -1,4 +1,6 @@
 import { IonApp } from "@ionic/react";
+import Footer from "pages/app/footer";
+import Header from "pages/app/header";
 import Routing from "routing";
 
 /* Core CSS required for Ionic components to work properly */
@@ -21,6 +23,8 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.scss";
 
 const App: React.FC = () => <IonApp>
+  <Header />
   <Routing />
+  <Footer />
 </IonApp>;
 export default App;

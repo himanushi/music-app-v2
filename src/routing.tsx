@@ -1,6 +1,6 @@
 import { IonRouterOutlet } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import Home from "pages/albums/album";
+import Home from "pages/album/album";
 import {
   Redirect, Route,
 } from "react-router";

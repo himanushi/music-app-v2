@@ -6,11 +6,9 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import ExploreContainer from "components/ExploreContainer";
-import Header from "pages/header";
-import "./Home.scss";
+import "./album.scss";
 
 const Home: React.FC = () => <IonPage>
-  <Header />
   <IonContent fullscreen>
     <IonHeader collapse="condense">
       <IonToolbar>
