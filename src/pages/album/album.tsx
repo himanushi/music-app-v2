@@ -1,7 +1,7 @@
 import {
   IonContent, IonPage,
 } from "@ionic/react";
-import { useAlbumQuery } from "hooks/models/use-models-query";
+import { useAlbumQuery } from "hooks/use-models-query";
 import Footer from "pages/app/footer";
 import Header from "pages/app/header";
 import { RouteComponentProps } from "react-router";
@@ -12,8 +12,6 @@ interface Props extends RouteComponentProps<{ id?: string }> {
 }
 
 const Album: React.FC<Props> = ({ match }) => {
-
-  console.log(match.params.id);
 
   const {
     data, loading,
