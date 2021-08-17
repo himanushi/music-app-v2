@@ -8,8 +8,8 @@ import {
 
 const Routing: React.FC = () => <IonReactRouter>
   <IonRouterOutlet>
-    <Route exact path="/albums" component={Albums} />
-    <Route path="/albums/:id" component={Album} />
+    <Route exact path="/albums" render={(props) => <Albums {...props} />} />
+    <Route path="/albums/:id" render={(props) => <Album {...props} />} />
     <Route exact path="/">
       <Redirect to="/albums" />
     </Route>

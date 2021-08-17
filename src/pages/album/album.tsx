@@ -9,13 +9,13 @@ import "./album.scss";
 
 interface Props extends RouteComponentProps<{ id: string }> {}
 
-const Album: React.FC<Props> = ({ match }) => {
+const Album: React.FC<Props> = (props: Props) => {
 
   const {
     data, loading,
   } = useAlbumQuery({
     fetchPolicy: "cache-first",
-    variables: { id: match.params.id },
+    variables: { id: props.match.params.id },
   });
 
   let content: JSX.Element = <></>;

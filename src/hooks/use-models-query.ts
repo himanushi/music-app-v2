@@ -2,7 +2,11 @@ import {
   DocumentNode, QueryFunctionOptions, useQuery,
 } from "@apollo/client";
 import {
-  Album, AlbumDocument, AlbumQueryVariables,
+  Album,
+  AlbumDocument,
+  AlbumQueryVariables,
+  AlbumsDocument,
+  AlbumsQueryVariables,
 } from "graphql/types";
 
 const useModelsQuery = <TData, TVariables>(
@@ -26,3 +30,12 @@ export const useAlbumQuery = (
     },
     QueryFunctionOptions<AlbumQueryVariables>
   >(AlbumDocument, variables);
+
+export const useAlbumsQuery = (
+  variables?: QueryFunctionOptions<AlbumsQueryVariables>
+) => useModelsQuery<
+    {
+      albums: Album[];
+    },
+    QueryFunctionOptions<AlbumsQueryVariables>
+  >(AlbumsDocument, variables);
