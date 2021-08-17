@@ -1,5 +1,6 @@
 import { IonRouterOutlet } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
+import Album from "pages/album/album";
 import Albums from "pages/albums/albums";
 import {
   Redirect, Route,
@@ -7,7 +8,8 @@ import {
 
 const Routing: React.FC = () => <IonReactRouter>
   <IonRouterOutlet>
-    <Route path="/albums" component={Albums} />
+    <Route exact path="/albums" component={Albums} />
+    <Route path="/albums/:id" component={Album} />
     <Route exact path="/">
       <Redirect to="/albums" />
     </Route>

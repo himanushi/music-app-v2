@@ -1,14 +1,26 @@
 import {
-  IonContent, IonPage,
+  IonButton, IonContent, IonPage,
 } from "@ionic/react";
 import Footer from "pages/app/footer";
 import Header from "pages/app/header";
+import { RouteComponentProps } from "react-router";
 import "./albums.scss";
 
-const Albums: React.FC = () => <IonPage>
+interface Props extends RouteComponentProps<{}> {}
+
+const Albums = ({ history }: Props) => <IonPage>
   <Header />
-  <IonContent className="ion-padding" fullscreen>
-      albums
+  <IonContent fullscreen>
+    <IonButton
+      onClick={(event) => {
+
+        event.preventDefault();
+        history.push("/albums/abm1788488178dd9");
+
+      }}
+    >
+        ボタン
+    </IonButton>
   </IonContent>
   <Footer />
 </IonPage>;
