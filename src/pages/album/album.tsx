@@ -7,9 +7,7 @@ import Header from "pages/app/header";
 import { RouteComponentProps } from "react-router";
 import "./album.scss";
 
-interface Props extends RouteComponentProps<{ id?: string }> {
-  id?: string;
-}
+interface Props extends RouteComponentProps<{ id: string }> {}
 
 const Album: React.FC<Props> = ({ match }) => {
 
