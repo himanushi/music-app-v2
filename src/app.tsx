@@ -1,4 +1,6 @@
+import { ApolloProvider } from "@apollo/client";
 import { IonApp } from "@ionic/react";
+import client from "graphql/client";
 import Routing from "routing";
 
 /* Core CSS required for Ionic components to work properly */
@@ -21,6 +23,8 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.scss";
 
 const App: React.FC = () => <IonApp>
-  <Routing />
+  <ApolloProvider client={client}>
+    <Routing />
+  </ApolloProvider>
 </IonApp>;
 export default App;

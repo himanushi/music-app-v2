@@ -6,6 +6,7 @@ module.exports = {
   },
   extends: ["eslint:all"],
   globals: {
+    JSX: false,
     MediaMetadata: true,
     MusicKit: false,
     React: false,
@@ -118,6 +119,9 @@ module.exports = {
 
     // アロー関数を有効にする
     "no-confusing-arrow": "off",
+
+    // console はデバッグで多用するため off
+    "no-console": "off",
 
     "no-duplicate-imports": "off",
 
